@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title>
+<script>
+function login()
+{
+	let mail=document.getElementById("mail").value;
+	let pattern=/\w+@\w+\.+/;
+	if(!pattern.test(mail))
+	{
+		alert("enter a valid email");
+		return;
+	}
+	let pass=document.getElementById("pass").value;
+	if(pass.length<6||pass.length>12)
+	{
+		alert("Password must be 6-12 characters only");
+		return;
+	}	
+	if(mail.trim()=="")
+	{
+		alert("Username is empty");
+		return;
+	}
+	if(pass.trim()=="")
+	{
+		alert("Password required");
+		return;
+	}
+	alert("Login successfully");
+};
+	
+</script>
+<body>
+<h3>login Page</h3>
+Email
+<input type="text" id="mail"><br><br>
+Password:
+<input type="password" id="pass"><br><br>
+
+<input type="button" value="Login" onclick="login()">
+</body>
+</html>
