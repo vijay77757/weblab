@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>OnlineCalculator</title>
+<script>
+document.getElementById("mul"),addEventListener("click",function()
+{
+	let n1=Number(document.getElementById("n1").value);
+	 let n2=Number(document.getElementById("n2").value);
+	 let op=document.getElementById("op").value;
+	let rslt;
+	switch(op)
+	{
+		case "+":rslt=(n1)+(n2);
+			break;
+		case "*":rslt=(n1)*(n2);
+                        break;
+		case "-":rslt=(n1)-(n2);
+                        break;
+		case "/":rslt=(n1)/(n2);
+                        break;
+	};
+	document.getElementById("rs").innerHTML="result:"+rslt;
+});
+</script>
+</head>
+<h4 align="center"><u>Calculator</u></h4>
+<body>
+Enter First Number:
+<input type="number" id="n1"><br>
+Enter operator:
+<input type="text" maxlength="1" id="op"><br>
+Enter Second Number:
+<input type="number" id="n2"><br>
+<input type="button" value="Submit" id="mul">
+<p id="rs"></p>
+</body>
+</html>
