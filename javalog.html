@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title>
+<script>
+function login()
+{
+	let username=document.getElementById("user").value;
+	let password=document.getElementById("pass").value;
+	if(username=="")
+	{
+		alert("Please enter username");
+		return;
+	}
+	if(password=="")
+	{
+		alert("Please enter password");
+		return;
+	}
+	if(password.length>6&&password.length<12)
+	{
+		alert("Password must be 6 characters only");
+		return;
+	}
+	alert("Login succesfully");
+}
+	
+</script>
+<body>
+<h3>login Page</h3>
+Username:
+<input type="text" id="user"><br><br>
+Password:
+<input type="password" id="pass"><br><br>
+
+<input type="button" value="Login" onclick="login()">
+</body>
+</html>
